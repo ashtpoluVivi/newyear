@@ -1,0 +1,273 @@
+/* General Body Styling */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #af32c8, #ff9e5f, #8d8886);
+    background-size: 200% 300%;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    overflow: hidden;
+    animation: backgroundAnimation 10s ease-in-out infinite;
+  }
+  
+  /* Gradient Background Animation */
+  @keyframes backgroundAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* New Year Message */
+  .new-year-message {
+    margin-top: 10vh;
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #fff;
+    animation: glowText 3s ease-in-out infinite alternate, textColorChange 5s linear infinite;
+    text-shadow: 
+      0 0 10px rgba(255, 255, 255, 0.6), 
+      0 0 20px rgba(255, 255, 255, 0.7), 
+      0 0 30px rgba(19, 18, 18, 0.8), 
+      0 0 40px rgba(223, 6, 6, 0.6), 
+      0 0 50px rgba(147, 147, 238, 0.5),
+      0 0 60px rgba(255, 0, 255, 0.4);
+  }
+  
+  /* Glow Effect with Multiple Colors */
+  @keyframes glowText {
+    0% { 
+      text-shadow: 
+        0 0 5px rgba(255, 255, 255, 0.6), 
+        0 0 10px rgba(255, 255, 255, 0.7), 
+        0 0 15px rgba(255, 0, 0, 0.8); 
+    }
+    50% { 
+      text-shadow: 
+        0 0 20px rgba(255, 0, 0, 0.7), 
+        0 0 25px rgba(0, 255, 0, 0.6), 
+        0 0 35px rgba(0, 0, 255, 0.5); 
+    }
+    100% { 
+      text-shadow: 
+        0 0 30px rgba(255, 0, 0, 0.9), 
+        0 0 50px rgba(255, 0, 255, 0.8), 
+        0 0 60px rgba(0, 255, 0, 0.7); 
+    }
+  }
+  
+  /* Color-changing Text Effect */
+  @keyframes textColorChange {
+    0% { color: #f0e4e2; } /* Tomato red */
+    25% { color: #ff8c00; } /* Dark orange */
+    50% { color: #0d47c3; } /* Medium sea green */
+    75% { color: #7e0303; } /* Dodger blue */
+    100% { color: #181517; } /* Deep pink */
+  }
+  
+  
+  /* Quotes Section */
+  .quotes-section {
+    text-align: center;
+    padding: 30px 30px;
+    background: linear-gradient(135deg, #9c5ae2, #10141b); /* Gradient background */
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 10px;
+    box-shadow: 
+      0 4px 10px rgb(255, 238, 238),  /* Main shadow for depth */
+      0 6px 20px rgba(0, 0, 0, 0.5), /* Purple glow */
+      0 8px 30px rgba(0, 0, 0, 0.3); /* Blue glow */
+    margin: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  }
+  
+  
+  .intro-quote {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1.5s ease-out forwards;
+  }
+  
+  .typing-effect {
+    font-size: 2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid white;
+    width: fit-content;
+    margin: 0 auto;
+    animation: typing 4s steps(40) 1.5s forwards, blink 0.75s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  @keyframes blink {
+    50% { border-color: transparent; }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .quotes-section:hover .intro-quote {
+    color: #ffdf5d;
+    transition: color 0.3s ease;
+  }
+  
+  .quotes-section:hover .typing-effect {
+    color: #ff6bcb;
+    border-color: #ff6bcb;
+    transition: color 0.3s ease;
+  }
+  
+  /* Styling for individual quotes */
+  .quote {
+    font-size: 1.6rem;
+    color: #fff;
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    text-align: center;
+    position: relative;
+    animation: typing 4s steps(40) 1s forwards, fadeIn 1s ease-out;
+  }
+  
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  .quote:before {
+    
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: #ff6347;
+    animation: sparkle 2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes sparkle {
+    0% { opacity: 0.7; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.2); }
+  }
+  
+  
+  /* Typing Effect for Quotes */
+  .typing-effect {
+    font-size: 1.8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid white;
+    color: white;
+    position: relative;
+    animation: typing 4s steps(40) 1s forwards, fadeCursor 1s step-end infinite, backgroundPulse 6s ease-in-out infinite;
+  }
+  
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  @keyframes fadeCursor {
+    50% { border-color: transparent; }
+  }
+  
+  @keyframes shrinkExpand {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+  }
+  
+  @keyframes backgroundPulse {
+    0% {
+      background: linear-gradient(90deg, #ff6bcb, #6a11cb, #2575fc);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    50% {
+      background: linear-gradient(90deg, #ff6347, #ffcc33, #6aff7b);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    100% {
+      background: linear-gradient(90deg, #6a11cb, #2575fc, #ff6bcb);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+  }
+  
+  /* Add extra flair to the text glow */
+  .typing-effect::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background: rgba(255, 255, 255, 0.2);
+    animation: shimmer 6s linear infinite;
+  }
+  
+  @keyframes shimmer {
+    from { width: 0; left: 0; }
+    to { width: 100%; left: 100%; }
+  }
+  
+  
+  /* Play Music Button */
+  .play-music-btn {
+    margin-top: 30px;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    color: white;
+    background-color: #ff6347;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    animation: buttonGlow 2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes buttonGlow {
+    0% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.5); }
+    100% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.9), 0 0 30px rgba(255, 255, 255, 0.7); }
+  }
+  
+  .play-music-btn:hover {
+    background-color: #8f2bb9;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+  }
+  
+  /* Snow Canvas */
+  .snow-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  

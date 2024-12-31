@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy New Year 2025!</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Main Greeting -->
+    <h1 class="new-year-message">🎆 Happy New Year 2025! 🎆</h1>
+
+    <!-- Quotes Section -->
+    <div class="quotes-section">
+      <p class="intro-quote">"1 day left until 2025, I just want to say that."</p>
+      <p class="quote typing-effect">"I'm glad that I met you <3."</p>
+    </div>
+    
+
+    <!-- Play Music Button -->
+    <button id="play-music" class="play-music-btn">Click to Play Music</button>
+
+    <!-- Snow Effect -->
+    <canvas id="snow" class="snow-canvas"></canvas>
+  </div>
+
+  <!-- Background Music -->
+  <audio id="background-music" src="Die With A Smile.mp3" loop></audio>
+
+  <script>
+    // Play background music on first user interaction (click on button or anywhere)
+    document.body.addEventListener('click', function() {
+      var music = document.getElementById("background-music");
+      music.play(); // Play the music once user clicks anywhere on the page
+    });
+
+    // Alternatively, allow the user to click the button to play music
+    document.getElementById('play-music').addEventListener('click', function() {
+      var music = document.getElementById("background-music");
+      music.play(); // Play the music when button is clicked
+    });
+  </script>
+
+  <script src="script.js"></script>
+  
+</body>
+</html>
