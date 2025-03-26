@@ -30,16 +30,16 @@
   <audio id="background-music" src="Die With A Smile.mp3" loop></audio>
 
   <script>
-    // Play background music on first user interaction (click on button or anywhere)
+    
     document.body.addEventListener('click', function() {
       var music = document.getElementById("background-music");
-      music.play(); // Play the music once user clicks anywhere on the page
+      music.play(); 
     });
 
-    // Alternatively, allow the user to click the button to play music
+
     document.getElementById('play-music').addEventListener('click', function() {
       var music = document.getElementById("background-music");
-      music.play(); // Play the music when button is clicked
+      music.play(); 
     });
   </script>
 
